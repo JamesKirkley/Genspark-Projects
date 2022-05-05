@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebe65a5a-c293-4f6d-a312-3197ff330ac5" name="Changes" comment="" />
+    <list default="true" id="ebe65a5a-c293-4f6d-a312-3197ff330ac5" name="Changes" comment="Project 1 update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +53,29 @@
       <option name="presentableId" value="Default" />
       <updated>1651518062106</updated>
     </task>
+    <task id="LOCAL-00001" summary="Project 1 update">
+      <created>1651758872462</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651758872462</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project 1 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project 1 update" />
   </component>
 </project>
