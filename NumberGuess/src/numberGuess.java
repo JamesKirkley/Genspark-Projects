@@ -1,50 +1,73 @@
+
 import java.util.Scanner;
 
 public class numberGuess {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
-        int randomNumber = 1 + (int) (20 * Math.random());
         int trails = 6;
-        int i;
-        int guess;
+        int guess =0;
         int count = 0;
         String name;
-        String again = null;
+        char again = 'y';
 
-        while(true) {
-            System.out.println("Hello! What is your name? \n ");
-            System.out.print("> ");
-            name = sc.next();
+        System.out.println("Hello! What is your name? \n ");
+        System.out.print("> ");
+        try {
+        name = sc.next(); }
+        catch (Exception e){
+            return;
+        }
+
+        while (again != 'n') {
+
+            int randomNumber = 1 + (int) (20 * Math.random());
 
             System.out.println("\nWell, " + name + ", I am thinking of a number between 1 and 20.");
 
+            if (randomNumber == 0) {
 
-            for (i = 0; i < trails; i++) {
+                randomNumber++;
+            }
+            do {
                 System.out.println("Take a guess.");
-                guess = sc.nextInt();
-                count++;
+                try {
+                    guess = sc.nextInt();
+                    count++;
+                } catch (Exception e){
+                    System.out.println("Pick a number between 1 and 20.");
+                    sc.nextLine();
+                    continue;
+                }
 
-                if (randomNumber == guess) {
-                    System.out.println("Good job, " + name + "! You guessed my number in " + count + " guesses!");
-                    System.out.println("Would you like to play again? (y or n)");
-                    again = sc.next();
-                    if (again.equalsIgnoreCase("y")) {
-                        
-                    } else if(again.equalsIgnoreCase("n")){
-                        System.out.println("Goodbye!");
-                        break;
-                    }
-                } else if (randomNumber > guess && i != trails - 1) {
+                if (randomNumber > guess) {
                     System.out.println("The number is greater than " + guess);
-                } else if (randomNumber < guess && i != trails - 1) {
+                } else if (randomNumber < guess) {
                     System.out.println("The number is less than " + guess);
                 }
             }
-            if (i > trails) {
-                System.out.println("You are out of attempts.");
-                System.out.println("The number was " + randomNumber);
+            while (guess != randomNumber && count <= trails - 1);
+
+            if (guess == randomNumber && count <= trails) {
+                System.out.println("Good job, " + name + "! You guessed my number in " + count + " guesses!");
+                System.out.println("Would you like to play again? (y or n)");
+                try {
+                again = sc.next().charAt(0);
+                    count = 0;
+                } catch (Exception e) {
+                    break;
+                }
+
+            } else {
+                System.out.println("You are out of attempts. \nThe number was " + randomNumber);
+                System.out.println("Would you like to play again? (y or n)");
+                try {
+                    again = sc.next().charAt(0);
+                    count = 0;
+                } catch (Exception e) {
+                    break;
+                }
+
             }
         }
     }
-
 }

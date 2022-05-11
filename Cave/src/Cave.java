@@ -1,11 +1,14 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Cave {
 
     public static void main( String[] args ){
         Scanner keyboard = new Scanner(System.in);
 
-        String Go, group, lone;
+        String Go = "";
+        String group = "";
+        String lone = "";
 
         System.out.println(" Welcome to the Goblin Cave");
         System.out.println("  ");
@@ -18,7 +21,12 @@ public class Cave {
                 "\n Choose to: \n\r 1: Approach the group" +
                 "\n\r 2: Approach the lone figure");
         System.out.print("> ");
-        Go = keyboard.next();
+        try {
+            Go = keyboard.next();
+        } catch (Exception e) {
+            System.out.println("Enter 1 or 2!");
+                   keyboard.next();
+        }
 
         if (Go.equals("1")) {
             System.out.println(" You approach the group and notice the smell getting worse... " +
@@ -28,7 +36,12 @@ public class Cave {
                     "\n What do you do?" +
                     "\n Choose to: \n\r 1: Get closer \n\r 2: Go back to the beginning ");
             System.out.print(">  ");
-            group = keyboard.next();
+            try {
+                group = keyboard.next();
+            } catch (Exception e) {
+                System.out.println("Enter 1 or 2!");
+                keyboard.next();
+            }
 
             if (group.equals("1")) {
                 System.out.println(" The voices get clearer... \n You hear 'WHAT ARE YOU DOING DPS'. " +
@@ -45,6 +58,10 @@ public class Cave {
                         "\n lies on the cold ground, you hear growls of happiness from the figures " +
                         "\n as if they have just achieved something." +
                         "\n YOU DIED!"); }
+            else {
+                System.out.println("Invalid Entry Detected.");
+                System.exit(0);
+            }
 
 
         }
@@ -56,7 +73,12 @@ public class Cave {
                     "\n You see the artifact you came for on the desk of the figure." +
                     "\n Choose to: \n\r 1: Go for the artifact \n\r 2: Leave");
             System.out.print(">  ");
-            lone = keyboard.next();
+            try {
+                lone = keyboard.next();
+            } catch (Exception e) {
+                System.out.println("Enter 1 or 2!");
+                keyboard.next();
+            }
 
             if (lone.equals("1")) {
                 System.out.println(" You go for the artifact..." +
@@ -77,6 +99,14 @@ public class Cave {
                         "\n They take you back to their tribe and you slowly integrate into their society..." +
                         "\n You become Goblin King and rule over them for seven years until you fall onto a stick and die." +
                         "\n YOU DIED!"); }
+            else {
+                System.out.println("Invalid Entry Detected.");
+                System.exit(0);
+            }
+
+        } else {
+            System.out.println("Invalid Entry Detected.");
+            System.exit(0);
         }
     }
 }

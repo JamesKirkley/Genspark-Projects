@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebe65a5a-c293-4f6d-a312-3197ff330ac5" name="Changes" comment="Project 1 update" />
+    <list default="true" id="ebe65a5a-c293-4f6d-a312-3197ff330ac5" name="Changes" comment="Project 1 update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NumberGuess/out/production/NumberGuess/numberGuess.class" beforeDir="false" afterPath="$PROJECT_DIR$/../NumberGuess/out/production/NumberGuess/numberGuess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NumberGuess/src/numberGuess.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NumberGuess/src/numberGuess.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
